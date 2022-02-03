@@ -3,8 +3,6 @@ layout: post
 title: My preference mac setup
 ---
 
-[MacSetup](#MacSetup) | [Install HomeBrew](#Install-HomeBrew) | [Install applications that you want](#Install-applications-that-you-want) | [Iterm2 setup](#Iterm2-setup) | [For M1 users](#For-M1-users)
-
 # MacSetup
 
 My preference mac setup for developers
