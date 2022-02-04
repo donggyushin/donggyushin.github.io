@@ -1,0 +1,31 @@
+---
+layout: post
+title: Open sources list that I created or contiributed
+---
+
+- [DGAlertView](https://github.com/donggyushin/DGAlertView)
+  - A simple custom popup dialog view for iOS written in Swift. Replaces UIAlertController alert style.
+- [DGLabelSize](https://github.com/donggyushin/DGLabelSize)
+  - Functions that calculate the size of uilabel based on different string lengths.
+- [DGBottomSheet](https://github.com/donggyushin/DGBottomSheet)
+  - The lightest swift bottom sheet library
+- [DGZoomableImageView](https://github.com/donggyushin/DGZoomableImageView)
+  - A zoomable, pan-able image view
+- [DGCropImage](https://github.com/donggyushin/DGCropImage)
+  - A photo cropping tool which mimics Photo.app written by Swift.
+- [DGSnackBar](https://github.com/donggyushin/DGSnackBar)
+  - Functional SnackBar that responds to the keyboard and shows a message at the bottom of the screen.
+- [DGFadingLabel](https://github.com/donggyushin/DGFadingLabel)
+  - A custom UILabel that fades away the end of your text when text is too large to fit within the label's frame.
+- [And](https://github.com/donggyushin/And)
+  - Syntactic sugar for Swift initializers
+- [DGLoading](https://github.com/donggyushin/DGLoading)
+  - A loading view that is shown at center of the current view.
+- [DGCarouselFlowLayout](https://github.com/donggyushin/DGCarouselFlowLayout)
+  - A carousel flow layout for UICollectionView on iOS.
+- [DGPlaceholderTextView](https://github.com/donggyushin/DGPlaceholderTextView)
+  - A light-weight UITextView that supports for placeholder.
+- [DGDynamicHeightTableView](https://github.com/donggyushin/DGDynamicHeightTableView)
+  - UITableView that supports auto calculated height by contents size.
+- [DGCardScanner](https://github.com/donggyushin/DGCardScanner)
+  - A credit card scanner for iOS written in Swift
