@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>홍천 1박2일 — 우리의 첫 여행</title>
+<style>
+  :root {
+    --bg: #f2f5f0;
+    --surface: #fbfcfa;
+    --ink: #1e2b27;
+    --muted: #5c6f68;
+    --faint: #8a9a93;
+    --line: #dde5df;
+    --river: #2e6e62;
+    --river-deep: #1f4f46;
+    --river-soft: #e2ece8;
+    --warm: #c25e43;
+    --warm-soft: #f5e6df;
+    --caution-bg: #f6efdc;
+    --caution-ink: #7a5d1e;
+    --peak-far: #b9cdc4;
+    --peak-mid: #8fb0a4;
+    --peak-near: #4c7f72;
+    --water: #7fa89d;
+    --sun: #e8b34b;
+    --shadow: 0 1px 2px rgba(30, 43, 39, 0.05), 0 8px 24px rgba(30, 43, 39, 0.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #131c19;
+      --surface: #1a2622;
+      --ink: #e5ece8;
+      --muted: #9db0a8;
+      --faint: #74867f;
+      --line: #2b3a34;
+      --river: #6fbfae;
+      --river-deep: #8fd4c4;
+      --river-soft: #22332e;
+      --warm: #e08a6b;
+      --warm-soft: #35271f;
+      --caution-bg: #322b18;
+      --caution-ink: #d9b96a;
+      --peak-far: #263630;
+      --peak-mid: #31473f;
+      --peak-near: #3d5c52;
+      --water: #3a544c;
+      --sun: #d9a748;
+      --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.25);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #131c19;
+    --surface: #1a2622;
+    --ink: #e5ece8;
+    --muted: #9db0a8;
+    --faint: #74867f;
+    --line: #2b3a34;
+    --river: #6fbfae;
+    --river-deep: #8fd4c4;
+    --river-soft: #22332e;
+    --warm: #e08a6b;
+    --warm-soft: #35271f;
+    --caution-bg: #322b18;
+    --caution-ink: #d9b96a;
+    --peak-far: #263630;
+    --peak-mid: #31473f;
+    --peak-near: #3d5c52;
+    --water: #3a544c;
+    --sun: #d9a748;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.25);
+  }
+  :root[data-theme="light"] {
+    --bg: #f2f5f0;
+    --surface: #fbfcfa;
+    --ink: #1e2b27;
+    --muted: #5c6f68;
+    --faint: #8a9a93;
+    --line: #dde5df;
+    --river: #2e6e62;
+    --river-deep: #1f4f46;
+    --river-soft: #e2ece8;
+    --warm: #c25e43;
+    --warm-soft: #f5e6df;
+    --caution-bg: #f6efdc;
+    --caution-ink: #7a5d1e;
+    --peak-far: #b9cdc4;
+    --peak-mid: #8fb0a4;
+    --peak-near: #4c7f72;
+    --water: #7fa89d;
+    --sun: #e8b34b;
+    --shadow: 0 1px 2px rgba(30, 43, 39, 0.05), 0 8px 24px rgba(30, 43, 39, 0.06);
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  .page { max-width: 620px; margin: 0 auto; padding: 0 20px 72px; }
+
+  /* ---------- hero ---------- */
+  .hero { padding: 52px 0 0; }
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-text { animation: rise 0.7s ease-out both; }
+    @keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  }
+  .eyebrow {
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-size: 14px;
+    letter-spacing: 0.14em;
+    color: var(--river);
+    margin: 0 0 14px;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(38px, 11vw, 54px);
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    font-weight: 800;
+    text-wrap: balance;
+  }
+  h1 .to-place { color: var(--river); }
+  .hero-sub { margin: 14px 0 0; color: var(--muted); font-size: 15.5px; text-wrap: balance; }
+  .hero-sub strong { color: var(--ink); font-weight: 700; }
+
+  .scene { display: block; width: 100%; height: auto; margin-top: 28px; }
+
+  /* ---------- sections ---------- */
+  section { margin-top: 52px; }
+  .label {
+    display: flex; align-items: baseline; gap: 10px;
+    margin: 0 0 6px;
+  }
+  .label .tag {
+    font-size: 12px; font-weight: 800; letter-spacing: 0.18em;
+    color: var(--river);
+  }
+  .label.warm .tag { color: var(--warm); }
+  .label .tagline { font-size: 13px; color: var(--faint); }
+  h2 { margin: 0 0 20px; font-size: 24px; letter-spacing: -0.02em; font-weight: 800; text-wrap: balance; }
+
+  /* ---------- weather ---------- */
+  .weather { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .wx {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+    padding: 16px 18px; box-shadow: var(--shadow);
+  }
+  .wx .d { font-size: 13px; font-weight: 700; color: var(--muted); }
+  .wx .t {
+    font-size: 26px; font-weight: 800; letter-spacing: -0.02em; margin-top: 2px;
+    font-variant-numeric: tabular-nums;
+  }
+  .wx .t small { font-size: 15px; color: var(--faint); font-weight: 600; }
+  .wx .s { font-size: 13.5px; color: var(--muted); margin-top: 4px; }
+  .wx-note { margin: 10px 2px 0; font-size: 13px; color: var(--faint); }
+
+  /* ---------- timeline ---------- */
+  .tl { list-style: none; margin: 0; padding: 0; }
+  .tl li { position: relative; padding: 0 0 26px 30px; }
+  .tl li::before {
+    content: ""; position: absolute; left: 5px; top: 9px; bottom: -9px;
+    width: 2px; background: var(--line);
+  }
+  .tl li:last-child::before { display: none; }
+  .tl li::after {
+    content: ""; position: absolute; left: 0; top: 7px;
+    width: 12px; height: 12px; border-radius: 50%;
+    background: var(--river); border: 2.5px solid var(--bg);
+  }
+  .tl.warm li::after { background: var(--warm); }
+  .tl .when {
+    font-size: 13px; font-weight: 800; color: var(--river);
+    font-variant-numeric: tabular-nums; letter-spacing: 0.04em;
+  }
+  .tl.warm .when { color: var(--warm); }
+  .tl .what { font-size: 17px; font-weight: 700; margin-top: 1px; }
+  .tl .how { font-size: 14.5px; color: var(--muted); margin-top: 3px; text-wrap: pretty; }
+  .pill {
+    display: inline-block; vertical-align: 2px; margin-left: 7px;
+    font-size: 11px; font-weight: 800; letter-spacing: 0.06em;
+    color: var(--river); background: var(--river-soft);
+    padding: 2px 8px; border-radius: 999px;
+  }
+  .tl.warm .pill { color: var(--warm); background: var(--warm-soft); }
+  .heads-up {
+    display: block; margin-top: 6px; font-size: 13.5px;
+    color: var(--caution-ink); background: var(--caution-bg);
+    border-radius: 8px; padding: 6px 10px; width: fit-content;
+  }
+  .maplink { color: var(--river); font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--river-soft); }
+  .maplink:hover { border-bottom-color: var(--river); }
+  .tl.warm .maplink { color: var(--warm); border-bottom-color: var(--warm-soft); }
+  .tl.warm .maplink:hover { border-bottom-color: var(--warm); }
+
+  /* ---------- checklists ---------- */
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 16px;
+    padding: 20px 20px 14px; box-shadow: var(--shadow);
+  }
+  .cl-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; }
+  .cl-count { font-size: 13px; font-weight: 700; color: var(--faint); font-variant-numeric: tabular-nums; }
+  .group-name {
+    font-size: 12px; font-weight: 800; letter-spacing: 0.12em;
+    color: var(--faint); margin: 14px 0 4px;
+  }
+  .check {
+    display: flex; align-items: flex-start; gap: 10px;
+    padding: 7px 4px; border-radius: 8px; cursor: pointer;
+  }
+  .check:hover { background: var(--river-soft); }
+  .check input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .check .box {
+    flex: 0 0 auto; width: 20px; height: 20px; margin-top: 2px;
+    border: 2px solid var(--faint); border-radius: 6px;
+    display: grid; place-items: center; transition: background 0.12s, border-color 0.12s;
+  }
+  .check .box::after {
+    content: ""; width: 10px; height: 6px;
+    border-left: 2.5px solid var(--surface); border-bottom: 2.5px solid var(--surface);
+    transform: rotate(-45deg) translateY(-1px); opacity: 0;
+  }
+  .check input:checked + .box { background: var(--river); border-color: var(--river); }
+  .check input:checked + .box::after { opacity: 1; }
+  .check input:focus-visible + .box { outline: 3px solid var(--river-soft); outline-offset: 1px; }
+  .check .txt { font-size: 15px; }
+  .check .txt small { display: block; font-size: 12.5px; color: var(--faint); }
+  .check input:checked ~ .txt { color: var(--faint); text-decoration: line-through; text-decoration-thickness: 1.5px; }
+  .cl-grid { display: grid; grid-template-columns: 1fr 1fr; column-gap: 8px; }
+  @media (max-width: 480px) { .cl-grid { grid-template-columns: 1fr; } }
+
+  /* ---------- notes ---------- */
+  .notes { list-style: none; margin: 0; padding: 0; }
+  .notes li {
+    position: relative; padding: 0 0 14px 22px;
+    font-size: 14.5px; color: var(--muted); text-wrap: pretty;
+  }
+  .notes li::before {
+    content: ""; position: absolute; left: 4px; top: 9px;
+    width: 7px; height: 7px; border-radius: 50%; background: var(--river);
+    opacity: 0.55;
+  }
+  .notes b { color: var(--ink); font-weight: 700; }
+
+  /* ---------- footer ---------- */
+  footer {
+    margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--line);
+    text-align: center; color: var(--faint); font-size: 13.5px;
+  }
+  footer .sign { font-family: Georgia, serif; font-style: italic; letter-spacing: 0.08em; margin-top: 4px; }
+</style>
+
+<main class="page">
+
+  <header class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">JULY 17 – 18, 2026 · 1박 2일</p>
+      <h1>우리의 첫 여행,<br /><span class="to-place">홍천</span>으로</h1>
+      <p class="hero-sub">팔봉산 여덟 봉우리 아래, 홍천강 바로 옆 펜션에서 —<br /><strong>동규 &amp; 미선</strong>의 여름 하루</p>
+    </div>
+    <svg class="scene" viewBox="0 0 620 170" role="img" aria-label="팔봉산 여덟 봉우리와 홍천강 풍경 일러스트">
+      <circle cx="500" cy="52" r="26" fill="var(--sun)" opacity="0.9" />
+      <polygon fill="var(--peak-far)" points="0,120 60,70 120,105 180,60 250,110 320,75 390,108 460,80 530,112 620,72 620,170 0,170" />
+      <polygon fill="var(--peak-mid)" points="0,132 45,96 95,124 150,88 205,126 265,94 330,128 395,98 455,128 515,100 570,126 620,104 620,170 0,170" />
+      <polygon fill="var(--peak-near)" points="0,150 40,122 80,142 120,116 165,144 215,120 260,146 310,122 355,146 405,124 450,148 500,126 550,148 620,128 620,170 0,170" />
+      <path d="M0 156 q 16 -5 32 0 t 32 0 t 32 0 t 32 0 t 32 0 t 32 0 t 32 0 t 32 0 t 32 0 t 32 0 t 32 0 t 32 0 t 32 0 t 32 0 t 32 0 t 32 0 t 32 0 t 32 0 t 32 0 t 12 0" stroke="var(--water)" stroke-width="2.5" fill="none" opacity="0.8" />
+      <path d="M0 164 q 16 -4 32 0 t 32 0 t 32 0 t 32 0 t 32 0 t 32 0 t 32 0 t 32 0 t 32 0 t 32 0 t 32 0 t 32 0 t 32 0 t 32 0 t 32 0 t 32 0 t 32 0 t 32 0 t 32 0 t 12 0" stroke="var(--water)" stroke-width="2" fill="none" opacity="0.45" />
+    </svg>
+  </header>
+
+  <section>
+    <div class="label"><span class="tag">날씨</span><span class="tagline">7/13 예보 기준 — 출발 전날 한 번 더 확인</span></div>
+    <div class="weather">
+      <div class="wx">
+        <div class="d">금요일 · 7/17</div>
+        <div class="t">☀️ 32° <small>/ 22°</small></div>
+        <div class="s">대체로 맑고 무더움 — 물놀이 날씨</div>
+      </div>
+      <div class="wx">
+        <div class="d">토요일 · 7/18</div>
+        <div class="t">🌦️ 29° <small>/ 21°</small></div>
+        <div class="s">소나기 가능성 — 우산 하나 챙기기</div>
+      </div>
+    </div>
+    <p class="wx-note">장마 막바지 시기라 예보가 흔들릴 수 있어. 그래도 우리 일정(금~토)이 주말 중 제일 날씨 운이 좋은 이틀!</p>
+  </section>
+
+  <section>
+    <div class="label"><span class="tag">DAY 1 · 금요일</span><span class="tagline">7월 17일</span></div>
+    <h2>홍천, 강가의 하루</h2>
+    <ul class="tl">
+      <li>
+        <div class="when">10:30</div>
+        <div class="what">서울 출발 🚗</div>
+        <div class="how">렌터카 픽업하고 출발. 금요일은 오후로 갈수록 길이 막혀서, 낮에 일찍 움직이는 게 승리.</div>
+      </li>
+      <li>
+        <div class="when">11:30</div>
+        <div class="what">동탄역에서 자기🩵 픽업</div>
+        <div class="how">동탄역에서 만나서 여기부터 같이 출발 — 여행 시작! 홍천까지 약 2시간 드라이브. (만나는 시간·출구는 전날 맞추자)</div>
+      </li>
+      <li>
+        <div class="when">13:30</div>
+        <div class="what">테라스의아침 ☕<span class="pill">옵션</span></div>
+        <div class="how">홍천강 뷰 테라스 카페. 생망고빙수가 유명해서 도착 기념 디저트로 딱. · 서면 팔봉강변길 217 1층 · <a class="maplink" href="https://map.naver.com/p/search/테라스의아침 홍천" target="_blank" rel="noopener">지도 보기</a></div>
+        <span class="heads-up">평일 라스트오더 16:00 — 들를 거면 이 타이밍이 좋아</span>
+      </li>
+      <li>
+        <div class="when">14:40</div>
+        <div class="what">하나로마트 서면농협 장보기 🛒</div>
+        <div class="how">저녁 바베큐 재료 조달 (아래 장보기 리스트 참고). 고기 사서 바로 펜션 냉장고로 직행. · <a class="maplink" href="https://map.naver.com/p/search/서면농협 하나로마트 홍천" target="_blank" rel="noopener">지도 보기</a></div>
+      </li>
+      <li>
+        <div class="when">15:30</div>
+        <div class="what">펜션 체크인 🏡</div>
+        <div class="how">서면 팔봉리 975-1 · 짐 풀고 한숨 돌리기. 창밖에 바로 강! · <a class="maplink" href="https://map.naver.com/p/search/홍천군 서면 팔봉리 975-1" target="_blank" rel="noopener">지도 보기</a></div>
+      </li>
+      <li>
+        <div class="when">16:30</div>
+        <div class="what">펜션 앞 홍천강에서 물장구 💦</div>
+        <div class="how">하루 중 제일 뜨거울 때 강물이 제일 시원해. 얕은 곳에서 첨벙첨벙, 아쿠아슈즈 신고 (강바닥 돌 조심).</div>
+      </li>
+      <li>
+        <div class="when">18:00</div>
+        <div class="what">숯불 바베큐 🔥</div>
+        <div class="how">노을 보면서 고기 굽기. 굽는 건 내가, 미선이는 제일 맛있는 부분 먹기 담당.</div>
+      </li>
+      <li>
+        <div class="when">20:00</div>
+        <div class="what">넷플릭스 밤 📺</div>
+        <div class="how">이불 속에서 넷플릭스 보다가 그대로 꿈나라까지. 볼 후보 미리 정해오기!</div>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="label warm"><span class="tag">DAY 2 · 토요일</span><span class="tagline">7월 18일</span></div>
+    <h2>파주 찍고, 서울로</h2>
+    <ul class="tl warm">
+      <li>
+        <div class="when">~10:30</div>
+        <div class="what">느긋한 아침 ☁️</div>
+        <div class="how">늦잠 자도 되는 아침. 간단히 먹고 짐 정리.</div>
+      </li>
+      <li>
+        <div class="when">11:00</div>
+        <div class="what">체크아웃 → 파주로 출발</div>
+        <div class="how">약 2시간~2시간 30분 드라이브. 중간에 휴게소 들러서 커피 한 잔.</div>
+      </li>
+      <li>
+        <div class="when">13:30</div>
+        <div class="what">임성근 부뚜막짜글이 🍲</div>
+        <div class="how">심학산 자락에 7월 9일 갓 오픈한 임성근 셰프네 짜글이집. 1층이 짜글이, 3층이 카페라 식후 커피까지 한 건물에서 해결. · 파주 돌곶이길 163 · <a class="maplink" href="https://map.naver.com/p/search/임성근 부뚜막짜글이 파주" target="_blank" rel="noopener">지도 보기</a></div>
+        <span class="heads-up">오픈 직후 핫플이라 웨이팅 가능성 — 예약을 안 받는대서 조금 일찍 도착 추천</span>
+      </li>
+      <li>
+        <div class="when">15:00</div>
+        <div class="what">헤이리 예술마을 산책 🎨</div>
+        <div class="how">갤러리, 소품샵, 책방 슬렁슬렁 구경. 예쁜 골목에서 사진 많이 찍자. · <a class="maplink" href="https://map.naver.com/p/search/헤이리예술마을" target="_blank" rel="noopener">지도 보기</a></div>
+      </li>
+      <li>
+        <div class="when">17:30</div>
+        <div class="what">서울로 🌇</div>
+        <div class="how">자유로 타고 약 1시간. 1박 2일 마무리 — 다음 여행지 후보 이야기하면서 복귀.</div>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="label"><span class="tag">장보기</span><span class="tagline">하나로마트에서 · 눌러서 체크</span></div>
+    <div class="card">
+      <div class="cl-head"><h2 style="margin:0; font-size:19px;">바베큐 &amp; 먹거리</h2><span class="cl-count" data-count="grocery">0 / 16</span></div>
+      <div class="cl-grid" data-list="grocery">
+        <div class="group-name" style="grid-column: 1 / -1;">메인</div>
+        <label class="check"><input type="checkbox" data-k="g-meat" /><span class="box"></span><span class="txt">삼겹살 · 목살</span></label>
+        <label class="check"><input type="checkbox" data-k="g-veg" /><span class="box"></span><span class="txt">쌈채소 · 상추</span></label>
+        <label class="check"><input type="checkbox" data-k="g-mush" /><span class="box"></span><span class="txt">버섯 · 마늘 · 양파</span></label>
+        <label class="check"><input type="checkbox" data-k="g-kimchi" /><span class="box"></span><span class="txt">김치</span></label>
+        <div class="group-name" style="grid-column: 1 / -1;">곁들임</div>
+        <label class="check"><input type="checkbox" data-k="g-rice" /><span class="box"></span><span class="txt">햇반</span></label>
+        <label class="check"><input type="checkbox" data-k="g-ramen" /><span class="box"></span><span class="txt">라면 (다음날 아침용)</span></label>
+        <label class="check"><input type="checkbox" data-k="g-egg" /><span class="box"></span><span class="txt">계란</span></label>
+        <label class="check"><input type="checkbox" data-k="g-drink" /><span class="box"></span><span class="txt">물 · 음료</span></label>
+        <label class="check"><input type="checkbox" data-k="g-icecream" /><span class="box"></span><span class="txt">아이스크림 🍦<small>디저트는 진심으로</small></span></label>
+        <label class="check"><input type="checkbox" data-k="g-fruit" /><span class="box"></span><span class="txt">과일</span></label>
+        <div class="group-name" style="grid-column: 1 / -1;">바베큐 장비 · 소모품</div>
+        <label class="check"><input type="checkbox" data-k="g-charcoal" /><span class="box"></span><span class="txt">숯 · 착화탄<small>펜션 대여되면 패스</small></span></label>
+        <label class="check"><input type="checkbox" data-k="g-tools" /><span class="box"></span><span class="txt">집게 · 쿠킹포일</span></label>
+        <label class="check"><input type="checkbox" data-k="g-plates" /><span class="box"></span><span class="txt">종이접시 · 컵</span></label>
+        <label class="check"><input type="checkbox" data-k="g-wipes" /><span class="box"></span><span class="txt">물티슈 · 키친타월</span></label>
+        <label class="check"><input type="checkbox" data-k="g-ice" /><span class="box"></span><span class="txt">얼음</span></label>
+        <label class="check"><input type="checkbox" data-k="g-bags" /><span class="box"></span><span class="txt">쓰레기봉투</span></label>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="label"><span class="tag">챙길 것</span><span class="tagline">출발 전 가방 체크</span></div>
+    <div class="card">
+      <div class="cl-head"><h2 style="margin:0; font-size:19px;">짐 싸기 리스트</h2><span class="cl-count" data-count="pack">0 / 15</span></div>
+      <div class="cl-grid" data-list="pack">
+        <div class="group-name" style="grid-column: 1 / -1;">기본</div>
+        <label class="check"><input type="checkbox" data-k="p-license" /><span class="box"></span><span class="txt">운전면허증<small>렌터카 픽업 필수!</small></span></label>
+        <label class="check"><input type="checkbox" data-k="p-charger" /><span class="box"></span><span class="txt">충전기 · 보조배터리</span></label>
+        <label class="check"><input type="checkbox" data-k="p-toiletry" /><span class="box"></span><span class="txt">세면도구 · 스킨케어</span></label>
+        <label class="check"><input type="checkbox" data-k="p-pajama" /><span class="box"></span><span class="txt">잠옷</span></label>
+        <div class="group-name" style="grid-column: 1 / -1;">물놀이</div>
+        <label class="check"><input type="checkbox" data-k="p-swim" /><span class="box"></span><span class="txt">수영복 · 여벌 옷</span></label>
+        <label class="check"><input type="checkbox" data-k="p-aqua" /><span class="box"></span><span class="txt">아쿠아슈즈<small>강바닥 돌 때문에 맨발 금지</small></span></label>
+        <label class="check"><input type="checkbox" data-k="p-towel" /><span class="box"></span><span class="txt">타월 (빨리 마르는 걸로)</span></label>
+        <label class="check"><input type="checkbox" data-k="p-waterproof" /><span class="box"></span><span class="txt">방수팩</span></label>
+        <div class="group-name" style="grid-column: 1 / -1;">여름 대비</div>
+        <label class="check"><input type="checkbox" data-k="p-suncream" /><span class="box"></span><span class="txt">선크림</span></label>
+        <label class="check"><input type="checkbox" data-k="p-mosquito" /><span class="box"></span><span class="txt">모기기피제 · 물림연고<small>강변 여름밤 필수템</small></span></label>
+        <label class="check"><input type="checkbox" data-k="p-hat" /><span class="box"></span><span class="txt">모자 · 선글라스</span></label>
+        <label class="check"><input type="checkbox" data-k="p-umbrella" /><span class="box"></span><span class="txt">우산<small>토요일 소나기 대비</small></span></label>
+        <div class="group-name" style="grid-column: 1 / -1;">상비약</div>
+        <label class="check"><input type="checkbox" data-k="p-digest" /><span class="box"></span><span class="txt">소화제</span></label>
+        <label class="check"><input type="checkbox" data-k="p-tylenol" /><span class="box"></span><span class="txt">타이레놀</span></label>
+        <label class="check"><input type="checkbox" data-k="p-band" /><span class="box"></span><span class="txt">밴드 · 연고</span></label>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="label"><span class="tag">미리 확인</span><span class="tagline">출발 전에 한 번씩</span></div>
+    <ul class="notes">
+      <li><b>마트 영업시간</b> — 시골 농협 마트라 저녁 8시 전후로 닫아. 금요일 낮 도착이라 여유 있지만, 네이버 지도에서 한 번 확인.</li>
+      <li><b>짜글이집 영업시간</b> — 오픈한 지 일주일이라 시간이 확정 공개 전. 토요일 아침에 네이버 플레이스 확인하고 출발.</li>
+      <li><b>펜션 숯 · 그릴 대여</b> — 펜션에서 빌려주면 장보기 리스트에서 숯 빼면 됨. 체크인 전에 문자로 물어보기.</li>
+      <li><b>물놀이 안전</b> — 장마 끝물이라 비 온 뒤엔 강 수위가 높을 수 있어. 물살 세 보이면 무리하지 말고 발만 담그기. 바로 옆 팔봉산유원지에서 구명조끼 무료 대여도 해줘.</li>
+      <li><b>날씨 재확인</b> — 목요일 밤에 예보 다시 보고, 토요일 소나기면 헤이리는 실내(갤러리 · 카페) 위주로.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <div>일정은 예상 시간표일 뿐 — 그날은 우리 페이스대로 🙂</div>
+    <div class="sign">Summer 2026, our first trip</div>
+  </footer>
+
+</main>
+
+<script>
+  (function () {
+    var KEY = "hongcheon-trip-2026-checks";
+    var saved = {};
+    try { saved = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { saved = {}; }
+
+    var boxes = document.querySelectorAll(".check input[type=checkbox]");
+    boxes.forEach(function (b) {
+      if (saved[b.dataset.k]) b.checked = true;
+      b.addEventListener("change", function () {
+        saved[b.dataset.k] = b.checked;
+        try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {}
+        refresh();
+      });
+    });
+
+    function refresh() {
+      document.querySelectorAll("[data-count]").forEach(function (c) {
+        var list = document.querySelector('[data-list="' + c.dataset.count + '"]');
+        if (!list) return;
+        var all = list.querySelectorAll("input[type=checkbox]");
+        var done = list.querySelectorAll("input[type=checkbox]:checked");
+        c.textContent = done.length + " / " + all.length;
+      });
+    }
+    refresh();
+  })();
+</script>
+
+</html>
