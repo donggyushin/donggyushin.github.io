@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0e9384">
+<title>홍천 당일치기 · 8월 16일</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  :root {
+    --bg: #f4faf8;
+    --surface: #ffffff;
+    --surface-2: #eaf5f2;
+    --ink: #10302b;
+    --muted: #5d807a;
+    --line: #d7e9e4;
+    --accent: #0e9384;
+    --accent-soft: #d7f2ec;
+    --coral: #e2603c;
+    --coral-soft: #fde8e1;
+    --shadow: 0 1px 2px rgba(16,48,43,.05), 0 8px 24px -12px rgba(16,48,43,.18);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0c1917;
+      --surface: #142522;
+      --surface-2: #1b302c;
+      --ink: #e9f5f2;
+      --muted: #93b2ac;
+      --line: #24403a;
+      --accent: #35d0bb;
+      --accent-soft: #123a34;
+      --coral: #ff9270;
+      --coral-soft: #3a2119;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.6);
+    }
+  }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Malgun Gothic", sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    word-break: keep-all;
+  }
+  .wrap { max-width: 560px; margin: 0 auto; padding: 0 18px 72px; }
+
+  /* ---------- hero ---------- */
+  .hero {
+    position: relative;
+    margin: 0 -18px 26px;
+    padding: 46px 26px 34px;
+    background: linear-gradient(155deg, var(--accent) 0%, #0b7a70 55%, #0a5f60 100%);
+    color: #fff;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: "";
+    position: absolute; left: 0; right: 0; bottom: -1px; height: 34px;
+    background: var(--bg);
+    border-radius: 26px 26px 0 0;
+  }
+  .hero .date {
+    display: inline-block;
+    font-size: 12px; font-weight: 700; letter-spacing: .13em;
+    padding: 5px 11px; border-radius: 999px;
+    background: rgba(255,255,255,.18);
+    backdrop-filter: blur(4px);
+  }
+  .hero h1 {
+    margin: 14px 0 8px;
+    font-size: 30px; line-height: 1.28; font-weight: 800; letter-spacing: -.02em;
+  }
+  .hero p { margin: 0; font-size: 14.5px; opacity: .9; position: relative; z-index: 1; }
+
+  /* ---------- days strip ---------- */
+  .days { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 30px; }
+  .day {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 13px;
+    padding: 12px 9px; text-align: center; box-shadow: var(--shadow);
+  }
+  .day.on { border-color: var(--accent); background: var(--accent-soft); }
+  .day b { display: block; font-size: 12px; color: var(--muted); font-weight: 700; letter-spacing: .04em; }
+  .day.on b { color: var(--accent); }
+  .day span { display: block; font-size: 13.5px; margin-top: 3px; font-weight: 600; }
+  .day em { display: block; font-size: 20px; font-style: normal; margin-bottom: 2px; }
+
+  /* ---------- section ---------- */
+  section { margin-bottom: 34px; }
+  h2 {
+    font-size: 13px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--muted); margin: 0 0 13px; display: flex; align-items: center; gap: 8px;
+  }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 15px;
+    padding: 17px; box-shadow: var(--shadow);
+  }
+  .note {
+    background: var(--surface-2); border: 1px solid var(--line);
+    border-radius: 13px; padding: 13px 15px; font-size: 13.5px; color: var(--muted);
+  }
+
+  /* ---------- timeline ---------- */
+  .tl { position: relative; padding-left: 26px; }
+  .tl::before {
+    content: ""; position: absolute; left: 6px; top: 10px; bottom: 12px;
+    width: 2px; background: linear-gradient(var(--accent), var(--line));
+  }
+  .ev { position: relative; margin-bottom: 20px; }
+  .ev:last-child { margin-bottom: 0; }
+  .ev::before {
+    content: ""; position: absolute; left: -25px; top: 7px;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--surface); border: 2.5px solid var(--accent);
+  }
+  .ev.key::before { background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+  .ev .t { font-size: 12.5px; font-weight: 800; color: var(--accent); letter-spacing: .04em; }
+  .ev .h { font-size: 16px; font-weight: 700; margin: 1px 0 3px; }
+  .ev .d { font-size: 13.5px; color: var(--muted); }
+  .ev.soft .h, .ev.soft .t { opacity: .62; }
+
+  /* ---------- place ---------- */
+  .place { margin-bottom: 12px; }
+  .place .top { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+  .place .emo { font-size: 22px; }
+  .place h3 { margin: 0; font-size: 17px; font-weight: 800; letter-spacing: -.01em; }
+  .place .tag {
+    font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 999px;
+    background: var(--coral-soft); color: var(--coral); white-space: nowrap;
+  }
+  .place p { margin: 9px 0 0; font-size: 14px; color: var(--muted); }
+  .meta { margin: 12px 0 0; padding: 0; list-style: none; font-size: 13px; }
+  .meta li { display: flex; gap: 9px; padding: 3px 0; color: var(--muted); }
+  .meta li b { color: var(--ink); font-weight: 700; min-width: 52px; flex-shrink: 0; }
+  .map {
+    display: inline-flex; align-items: center; gap: 6px; margin-top: 13px;
+    font-size: 13.5px; font-weight: 700; text-decoration: none;
+    color: var(--accent); background: var(--accent-soft);
+    padding: 8px 14px; border-radius: 999px;
+  }
+  .map:active { transform: scale(.97); }
+
+  /* ---------- checklist ---------- */
+  .ck-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 11px; }
+  .ck-head .n { font-size: 13px; font-weight: 800; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .bar { height: 5px; border-radius: 999px; background: var(--surface-2); overflow: hidden; margin-bottom: 15px; }
+  .bar i { display: block; height: 100%; width: 0; background: var(--accent); border-radius: 999px; transition: width .3s ease; }
+  .ck { display: block; padding: 9px 0; border-bottom: 1px solid var(--line); cursor: pointer; user-select: none; }
+  .ck:last-of-type { border-bottom: 0; }
+  .ck input { position: absolute; opacity: 0; pointer-events: none; }
+  .ck .row { display: flex; align-items: center; gap: 11px; }
+  .box {
+    width: 21px; height: 21px; border-radius: 7px; flex-shrink: 0;
+    border: 2px solid var(--line); background: var(--surface);
+    display: grid; place-items: center; transition: all .16s ease;
+  }
+  .box::after {
+    content: ""; width: 5px; height: 9px; margin-top: -2px;
+    border: solid #fff; border-width: 0 2.5px 2.5px 0;
+    transform: rotate(45deg) scale(0); transition: transform .16s ease;
+  }
+  .ck input:checked + .row .box { background: var(--accent); border-color: var(--accent); }
+  .ck input:checked + .row .box::after { transform: rotate(45deg) scale(1); }
+  .ck input:checked + .row .lb { color: var(--muted); text-decoration: line-through; }
+  .lb { font-size: 14.5px; transition: color .16s ease; }
+  .lb small { display: block; font-size: 12.5px; color: var(--muted); text-decoration: none; }
+
+  /* ---------- tips ---------- */
+  .tips { margin: 0; padding: 0; list-style: none; }
+  .tips li { display: flex; gap: 10px; font-size: 14px; padding: 7px 0; }
+  .tips li:not(:last-child) { border-bottom: 1px solid var(--line); }
+  .tips .ico { flex-shrink: 0; }
+
+  footer { text-align: center; font-size: 12.5px; color: var(--muted); padding-top: 8px; }
+  footer b { color: var(--coral); }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <span class="date">2026 · 08 · 16 일요일</span>
+  <h1>홍천 당일치기 🏞️</h1>
+  <p>지난번에 지나치기만 했던 두 곳,<br>이번엔 거기만 보고 오자.</p>
+</div>
+
+<div class="wrap">
+
+  <div class="days">
+    <div class="day"><em>🍳</em><b>8/15 토</b><span>집밥 &amp; 영화</span></div>
+    <div class="day on"><em>🚗</em><b>8/16 일</b><span>홍천</span></div>
+    <div class="day"><em>😴</em><b>8/17 월</b><span>푹 쉬기</span></div>
+  </div>
+
+  <section>
+    <h2>날씨</h2>
+    <div class="note">
+      🌤️ 아직 8월 3일이라 예보가 안 나왔어. <b>15일쯤 다시 확인해서 여기 채워둘게.</b><br>
+      한여름이라 낮엔 <b>32~34℃</b> 정도 예상 — 그늘·실내 위주로 잡았어.
+    </div>
+  </section>
+
+  <section>
+    <h2>하루 일정</h2>
+    <div class="tl">
+      <div class="ev">
+        <div class="t">07:30</div>
+        <div class="h">🚙 서울에서 출발</div>
+        <div class="d">일찍 나가야 안 막혀. 차 안에서 더 자도 돼.<br><small>* 렌터카 받는 시간 따라 9시로 밀릴 수도 있어</small></div>
+      </div>
+      <div class="ev soft">
+        <div class="t">09:30</div>
+        <div class="h">💧 홍천강 도착 · 발만 담그기</div>
+        <div class="d">그늘에서 잠깐. 더우면 그냥 건너뛰고 바로 밥 먹으러 가자.</div>
+      </div>
+      <div class="ev key">
+        <div class="t">11:20</div>
+        <div class="h">🍗 점심 — 명가춘천닭갈비막국수</div>
+        <div class="d">11시 오픈이라 열자마자 가는 거야. 연휴라 늦으면 줄 서.</div>
+      </div>
+      <div class="ev key">
+        <div class="t">12:40</div>
+        <div class="h">🍧 테라스의아침</div>
+        <div class="d">지난번에 가고 싶다고 했던 그 카페. 생망고빙수 먹고 강 보면서 오래 앉아 있자 — 오늘의 메인이야.</div>
+      </div>
+      <div class="ev soft">
+        <div class="t">15:00</div>
+        <div class="h">🛒 장 보기 (선택)</div>
+        <div class="d">서면농협 들러서 저녁거리. 집에서 내가 해줄게.</div>
+      </div>
+      <div class="ev">
+        <div class="t">15:30</div>
+        <div class="h">🌇 출발 → 6~7시쯤 서울</div>
+        <div class="d">해 지기 전에 돌아와서 저녁 먹고 쉬자.</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>오늘 가는 곳</h2>
+
+    <div class="card place">
+      <div class="top">
+        <span class="emo">🍗</span>
+        <h3>명가춘천닭갈비막국수</h3>
+        <span class="tag">점심</span>
+      </div>
+      <p>팔봉산 바로 앞 닭갈비집. 양념닭갈비랑 막국수 같이 시키면 딱이야.</p>
+      <ul class="meta">
+        <li><b>주소</b><span>홍천군 서면 팔봉산로 1145</span></li>
+        <li><b>영업</b><span>11:00 ~ 20:30 · 화요일 휴무</span></li>
+        <li><b>메뉴</b><span>양념닭갈비 15,000 · 막국수 8,000</span></li>
+        <li><b>주차</b><span>넓은 전용 주차장 있음</span></li>
+      </ul>
+      <a class="map" href="https://map.naver.com/p/search/%EB%AA%85%EA%B0%80%EC%B6%98%EC%B2%9C%EB%8B%AD%EA%B0%88%EB%B9%84%EB%A7%89%EA%B5%AD%EC%88%98" target="_blank" rel="noopener">📍 지도에서 보기</a>
+    </div>
+
+    <div class="card place">
+      <div class="top">
+        <span class="emo">🍧</span>
+        <h3>테라스의아침</h3>
+        <span class="tag">그때 못 간 곳</span>
+      </div>
+      <p>홍천강이 그대로 보이는 테라스 카페. 시그니처가 <b>생망고빙수</b>야. 지난 여행 때 지나가면서 봐뒀던 데.</p>
+      <ul class="meta">
+        <li><b>주소</b><span>홍천군 서면 팔봉강변길 217</span></li>
+        <li><b>영업</b><span>주말 10:00 ~ 19:00 · 목요일 휴무</span></li>
+        <li><b>거리</b><span>밥집에서 차로 5분</span></li>
+      </ul>
+      <a class="map" href="https://map.naver.com/p/search/%ED%85%8C%EB%9D%BC%EC%8A%A4%EC%9D%98%EC%95%84%EC%B9%A8" target="_blank" rel="noopener">📍 지도에서 보기</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>챙길 것</h2>
+    <div class="card">
+      <div class="ck-head">
+        <span style="font-size:14.5px;font-weight:700">짐 체크리스트</span>
+        <span class="n" id="cnt">0 / 9</span>
+      </div>
+      <div class="bar"><i id="bar"></i></div>
+      <div id="list">
+        <label class="ck"><input type="checkbox"><span class="row"><span class="box"></span><span class="lb">편한 신발<small>많이 걷진 않을 거야</small></span></span></label>
+        <label class="ck"><input type="checkbox"><span class="row"><span class="box"></span><span class="lb">모자 · 선글라스</span></span></label>
+        <label class="ck"><input type="checkbox"><span class="row"><span class="box"></span><span class="lb">선크림</span></span></label>
+        <label class="ck"><input type="checkbox"><span class="row"><span class="box"></span><span class="lb">수건<small>강가에서 발 담글 때</small></span></span></label>
+        <label class="ck"><input type="checkbox"><span class="row"><span class="box"></span><span class="lb">여벌 양말</span></span></label>
+        <label class="ck"><input type="checkbox"><span class="row"><span class="box"></span><span class="lb">얇은 가디건<small>카페 냉방 셀 수도</small></span></span></label>
+        <label class="ck"><input type="checkbox"><span class="row"><span class="box"></span><span class="lb">멀미약<small>혹시 모르니까</small></span></span></label>
+        <label class="ck"><input type="checkbox"><span class="row"><span class="box"></span><span class="lb">보조배터리</span></span></label>
+        <label class="ck"><input type="checkbox"><span class="row"><span class="box"></span><span class="lb">물<small>차에 넉넉히 실어둘게</small></span></span></label>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>미리 알아두면</h2>
+    <div class="card">
+      <ul class="tips">
+        <li><span class="ico">⏰</span><span>닭갈비집은 예약을 안 받아서 <b>11시 오픈 맞춰</b> 가는 게 제일 편해.</span></li>
+        <li><span class="ico">🗓️</span><span>밥집은 화요일, 카페는 목요일 휴무 — 일요일이라 둘 다 열어.</span></li>
+        <li><span class="ico">⛰️</span><span>팔봉산은 밧줄 잡고 오르는 산이라 <b>이번엔 안 올라가</b>. 강가만 걸을 거야.</span></li>
+        <li><span class="ico">🧊</span><span>더우면 언제든 말해. 바로 실내로 옮기면 돼. 무리해서 볼 거 없어.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    8월 16일, 홍천에서 <b>♥</b><br>
+    <span style="opacity:.7">2026.08.03 만듦</span>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  var KEY = 'hongcheon-0816-checklist';
+  var boxes = Array.prototype.slice.call(document.querySelectorAll('#list input[type=checkbox]'));
+  var cnt = document.getElementById('cnt');
+  var bar = document.getElementById('bar');
+
+  function render() {
+    var done = boxes.filter(function (b) { return b.checked; }).length;
+    cnt.textContent = done + ' / ' + boxes.length;
+    bar.style.width = (done / boxes.length * 100) + '%';
+  }
+
+  function save() {
+    try {
+      localStorage.setItem(KEY, JSON.stringify(boxes.map(function (b) { return b.checked; })));
+    } catch (e) {}
+  }
+
+  try {
+    var saved = JSON.parse(localStorage.getItem(KEY) || '[]');
+    if (saved.length === boxes.length) {
+      saved.forEach(function (v, i) { boxes[i].checked = !!v; });
+    }
+  } catch (e) {}
+
+  boxes.forEach(function (b) {
+    b.addEventListener('change', function () { render(); save(); });
+  });
+
+  render();
+})();
+</script>
+
+</body>
+</html>
